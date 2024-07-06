@@ -7,11 +7,12 @@ module "app_network" {
 
   subnets = [
         {
-            subnet_name      = "${var.network_name}-subnet0"
-            subnet_ip        = var.network_ip_range
-            subnet_region    = var.region
+          subnet_name      = "${var.network_name}-subnet0"
+          subnet_ip        = var.network_ip_range
+          subnet_region    = var.region
         }
   ]
+}
 
   ingress_rules = [
     {
@@ -49,7 +50,7 @@ resource "google_compute_instance" "app" {
       image = data.google_compute_image.ubuntu.self_link
     }
   }
-  network_interface {
+   network_interface {
    subnetwork = module.app_network.subnets.name[0]
    access_config {
       # Leave empty for dynamic public IP
