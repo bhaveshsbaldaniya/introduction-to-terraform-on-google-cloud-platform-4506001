@@ -15,8 +15,8 @@ data "google_compute_image" "ubuntu" {
   family      = "ubuntu-2204-lts"
 }
 
-resource "google_compute_instance" "web" {
-  name         = "web"
+resource "google_compute_instance" "app" {
+  name         = "app"
   machine_type = "e2-micro"
 
   
@@ -31,6 +31,6 @@ resource "google_compute_instance" "web" {
       # Leave empty for dynamic public IP
     }
   }  
-  
+
  allow_stopping_for_update = true
 }
