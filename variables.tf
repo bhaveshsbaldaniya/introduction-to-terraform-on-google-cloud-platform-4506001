@@ -25,7 +25,7 @@ variable "image_project" {
 
 variable "image_family" {
     type = string
-    default = "ubuntu-os-cloud"
+    default = "ubuntu-2204-lts"
 }
 
 variable "app_name" {
