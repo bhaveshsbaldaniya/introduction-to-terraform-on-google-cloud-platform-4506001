@@ -12,7 +12,6 @@ module "app_network" {
           subnet_region    = var.region
         }
   ]
-}
 
   ingress_rules = [
     {
