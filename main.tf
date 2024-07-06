@@ -33,4 +33,5 @@ resource "google_compute_instance" "app" {
   }  
 
  allow_stopping_for_update = true
+ #checking pending
 }
